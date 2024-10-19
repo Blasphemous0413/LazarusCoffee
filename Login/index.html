@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_4.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Lazarus</title>
+
+</head>
+<body>
+    <header>    
+        <div id="banner"> <img src="img/Banner.svg" > </div>
+    </header>
+    <button id="btscroll" onclick="arriba()">⬆️</button>
+    <main>
+        
+        <main>
+            <nav id="myMainNav" class="main-nav">
+                <div class="nav-boxes"> <a href="../Inicio/index.html">Inicio</a> </div>
+                <div class="nav-boxes"> <a href="../Menu/index.html">Menú</a> </div>
+                <div class="nav-boxes"> <a href="../Rewards/index.html">Rewards</a> </div>
+                <button class="icon" onclick="myFunction();"><i class="fa fa-bars"></i></button>
+            </nav>
+            
+      
+
+    <div class="contact_form">
+        <div class="formulario">
+            <h1>Contáctanos</h1>
+            <h3>Escríbenos un mensaje y en breve nos pondremos en contacto contigo.</h3>
+            <form action="" method="post">
+                <p>
+                    <label for="nombre" class="colocar_nombre">Nombre
+                        <span class="obligatorio">*</span>
+                    </label>
+                    <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                </p>
+
+                <p>
+                    <label for="email" class="colocar_email">Email
+                        <span class="obligatorio">*</span>
+                    </label>
+                        <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                </p>		
+            
+                <p>
+                    <label for="asunto" class="colocar_asunto">Asunto
+                        <span class="obligatorio">*</span>
+                    </label>
+                        <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+                </p>		
+            
+                <p>
+                    <label for="mensaje" class="colocar_mensaje">Mensaje
+                        <span class="obligatorio">*</span>
+                    </label>                     
+                         <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                   </p>	  								
+            
+                <button type="button" value="Resets" onclick="document.location.reload()" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+                <script src="main.js"></script>
+
+                <p class="aviso">
+                    <span class="obligatorio"> * </span>Los campos son obligatorios.
+                </p>					
+            </form>    
+        </div>
+
+    </div>
+</main>
+    
+    <footer>
+    <div class="footer"> <img src="img/Footer.svg"></div>
+    </footer>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myMainNav");
+            if (x.className === "main-nav") {
+                x.className += " responsive"; // Adds "responsive" class without removing the existing one
+            } else {
+                x.className = "main-nav"; // Resets to original class if "responsive" is present
+            }
+        }
+    </script>
+
+    <script>
+        window.onscroll = function() {
+            var btscroll = document.getElementById("btscroll");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                btscroll.style.display = "block";
+            } else {
+                btscroll.style.display = "none";
+            }
+        }
+
+        function arriba() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

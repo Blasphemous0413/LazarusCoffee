@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazarus</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <header>    
+        <div id="banner"> <img src="img/Banner.svg" > </div>
+    </header>
+    <button id="btscroll" onclick="arriba()">⬆️</button>
+    <main>
+        <nav id="myMainNav" class="main-nav">
+            <div class="nav-boxes"> <a href="../Inicio/index.html">Inicio</a> </div>
+            <div class="nav-boxes"> <a href="../Login/index.html">Contacto</a> </div>
+            <div class="nav-boxes"> <a href="../Rewards/index.html">Rewards</a> </div>
+            <button class="icon" onclick="myFunction();"><i class="fa fa-bars"></i></button>
+        </nav>
+
+        <section class="menu">
+
+            <h2>Menú de Bebidas</h2>
+            <div class="items">
+                <div class="item">
+                    <img src="img/capussino.webp" alt="">
+                    <p>Capuccino</p>
+                </div>
+                <div class="item">
+                    <img src="img/espresso.webp" alt="Bebida 2">
+                    <p>Espresso</p>
+                </div>
+                <div class="item">
+                    <img src="img/cold.png" alt="Bebida 3">
+                    <p>Cold Brew</p>
+                </div>
+                <div class="item">
+                    <img src="img/frapp.png" alt="Bebida 4">
+                    <p>Fappuccino</p>
+                </div>
+                <div class="item">
+                    <img src="img/ameri.png" alt="Bebida 5">
+                    <p>americano</p>
+                </div>
+                <div class="item">
+                    <img src="img/latte.png" alt="Bebida 6">
+                    <p>Latte</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+    <div class="footer"> <img src="img/Footer.svg"></div>
+    </footer>
+
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myMainNav");
+            if (x.className === "main-nav") {
+                x.className += " responsive"; // Adds "responsive" class without removing the existing one
+            } else {
+                x.className = "main-nav"; // Resets to original class if "responsive" is present
+            }
+        }
+    </script>
+
+    <script>
+        window.onscroll = function() {
+            var btscroll = document.getElementById("btscroll");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                btscroll.style.display = "block";
+            } else {
+                btscroll.style.display = "none";
+            }
+        }
+
+        function arriba() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

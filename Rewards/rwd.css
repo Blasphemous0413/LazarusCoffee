@@ -1,0 +1,112 @@
+/* Contenedor principal */
+.container {
+    margin: 0 auto !important; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    top:30%;
+    position:relative;
+    background-color: #3333338c;
+}
+
+/* Contenedor izquierdo (Lazarus Rewards) */
+.left {
+    width: 30%;
+    background: linear-gradient(to bottom, rgb(160, 148, 78), transparent);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    margin-left: 5%;
+}
+
+/* Título y subtítulo del contenedor izquierdo */
+.left h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-family: 'Anastasia Regular';
+}
+
+.left h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-family: 'Anastasia Regular';
+}
+
+/* Botones dentro del contenedor izquierdo */
+.left button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #534e44;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    font-size: 28px;
+    font-family: 'Anastasia Regular';
+    overflow: hidden;
+}
+
+.left button:hover {
+    background-color: #ff7f00;
+}
+
+/* Contenedor derecho (Recompensas) */
+.right {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-family: 'Anastasia Regular';
+}
+
+/* Cada recompensa individual */
+.reward {
+    flex: 1;
+    min-width: 150px;
+    padding: 20px;
+    background-color: #ffe0b2;
+    color: #333;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-size: 28px;
+    margin: 10%;
+    font-family: 'Anastasia Regular';
+}
+
+/* Hover para las recompensas */
+.reward:hover {
+    background-color: #ffcc00;
+}
+
+/* Responsivo para pantallas de hasta 768px */
+@media (max-width: 768px) {
+    .left h1, .left h2 {
+        font-size: 18px; /* Ajuste adicional para pantallas medianas */
+    }
+}
+
+/* Responsivo para pantallas de hasta 480px */
+@media (max-width: 480px) {
+    .left h1, .left h2 {
+        font-size: 16px; /* Reducción para pantallas pequeñas */
+    }
+
+    .left button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .reward {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}

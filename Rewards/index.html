@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazarus</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="rwd.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <header> 
+        <div id="banner"> <img src="img/Banner.svg" > </div>
+    </header>
+    <button id="btscroll" onclick="arriba()">⬆️</button>
+    <main>
+        <nav id="myMainNav" class="main-nav">
+            <div class="nav-boxes"> <a href="../Inicio/index.html">Inicio</a> </div>
+            <div class="nav-boxes"> <a href="../Login/index.html">Contacto</a> </div>
+            <div class="nav-boxes"> <a href="../Menu/index.html">Menú</a> </div>
+            <button class="icon" onclick="myFunction();"><i class="fa fa-bars"></i></button>
+        </nav>
+
+        <!-- Victor -->
+
+        <div class="container">
+            <div class="left">
+                <h1>Lazarus Rewards</h1>
+                <h2>Hola, café gratis</h2>
+                <button id="loginBtn">Iniciar Sesión</button>
+                <button>Crear Cuenta</button>
+                <button>My Rewards</button>
+            </div>
+            <div class="right" id="rewardsSection">
+                <div class="reward">Refill gratis</div>
+                <div class="reward">Bebida de cumpleaños</div>
+                <div class="reward">Ofertas personalizadas</div>
+                <div class="reward">Llévate un pastel</div>
+                <div class="reward">Llévate un peluche</div>
+            </div>
+        </div>
+        <!-- Victor -->
+
+    </main>
+    <footer>
+    <div class="footer"> <img src="img/Footer.svg"></div>
+    </footer>
+
+
+
+    <script>
+       function myFunction() {
+            var x = document.getElementById("myMainNav");
+            if (x.className === "main-nav") {
+                x.className += " responsive";
+            } else {
+                x.className = "main-nav";
+            }
+        }
+    </script>
+
+    <script>
+        // Script 1: Cuenta regresiva de 5 segundos al hacer clic en "Crear Cuenta"
+        document.querySelector("button:nth-of-type(2)").addEventListener("click", function() {
+            let countdown = 5;
+            const countdownInterval = setInterval(function() {
+                if (countdown > 0) {
+                    alert(`Crea tu cuenta después de ${countdown} clicks`);
+                    countdown--;
+                } else {
+                    clearInterval(countdownInterval);
+                    alert("¡Listo! Ahora puedes crear tu cuenta.");
+                }
+            }, 1000);
+        });
+
+        // Script 2: Añadir una nueva recompensa dinámicamente
+        document.querySelector("button:nth-of-type(3)").addEventListener("click", function() {
+            const newReward = document.createElement("div");
+            newReward.classList.add("reward");
+            newReward.textContent = "Recompensa secreta";
+            document.getElementById("rewardsSection").appendChild(newReward);
+        });
+    </script>
+
+    <script>
+        window.onscroll = function() {
+            var btscroll = document.getElementById("btscroll");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                btscroll.style.display = "block";
+            } else {
+                btscroll.style.display = "none";
+            }
+        }
+    
+        function arriba() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+</script>
+</body>
+</html>
