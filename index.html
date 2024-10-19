@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazarus</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <header>    
+        <div id="banner"> <img src="Banner.svg" > </div>
+    </header>
+   
+    <main>
+        <nav id="myMainNav" class="main-nav">
+            <div class="nav-boxes"> <a href="#">Menu</a> </div>
+            <div class="nav-boxes"> <a href="#">Contacto</a> </div>
+            <div class="nav-boxes"> <a href="#">Rewards</a> </div>
+            <button class="icon" onclick="myFunction();"><i class="fa fa-bars"></i></button>
+        </nav>
+
+        <!-- Victor -->
+
+        <div class="rwd">
+
+        </div>
+
+        <!-- Victor -->
+
+    </main>
+    <footer>
+    <div id="footer"> <img src="Footer.svg"></div>
+    </footer>
+
+
+
+    <script>
+       function myFunction() {
+            var x = document.getElementById("myMainNav");
+            if (x.className === "main-nav") {
+                x.className += " responsive";
+            } else {
+                x.className = "main-nav";
+            }
+        }
+    </script>
+
+
+</body>
+</html>
